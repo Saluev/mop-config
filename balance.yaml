@@ -1,0 +1,181 @@
+battles:
+  ranged_attack_max_ap_cost: 1.0
+  fallback_attack_defense:
+    strength: 8
+  base_city_counterattack_strength:
+    strike: 20
+    charge: 10
+    volley: 0
+    barrage: 0
+    gunfire: 0
+    boarding: 0
+    ramming: 0
+    canister_shots: 0
+    round_shots: 0
+  base_city_hp_defense_strength:
+    strike: 10
+    charge: 40
+    volley: 20
+    barrage: 10
+    gunfire: 15
+    boarding: 0
+    ramming: 0
+    canister_shots: 0
+    round_shots: 0
+  base_city_dp_defense_strength:
+    strike: 20
+    charge: 50
+    volley: 50
+    barrage: 10
+    gunfire: 30
+    boarding: 0
+    ramming: 0
+    canister_shots: 0
+    round_shots: 0
+  base_hp_damage: 30
+  boarding_hp_transfer_rate: 0.2
+  sp_100_damage_reduction: 0.5
+  sp_1000_damage_reduction: 0.01
+city_budget:
+  university_budget_per_citizen: 2
+  university_default_budget: eval(2 * university_budget_per_citizen)
+  university_min_budget: 0
+  university_base_citizen_limit: 4
+  university_budget_deficit_discomfort_per_citizen: 2
+  university_budget_surplus_comfort_per_citizen: 1
+  university_max_budget_deficit_discomfort: eval(city_comfort.comfort_to_grow // 2) # professors will stick around for at least 2 turns
+  university_max_budget_surplus_comfort: 10
+  fortress_budget_per_citizen: 2
+  fortress_default_budget: eval(2 * fortress_budget_per_citizen)
+  fortress_min_budget: eval(fortress_budget_per_citizen)
+  fortress_base_citizen_limit: 2
+city_comfort:
+  base_comfort: 3
+  overpopulation_discomfort_per_citizen: 1
+  comfort_to_grow: 10
+city_economy:
+  per_citizen_food_demand: 2
+  per_citizen_goods_priority: 0.25
+  base_tax_per_resource: {} # TODO
+  gold_priority: 0.125
+  knowledge_priority: 0.49
+  comfort_priority: 0.25
+  fallback_priority: 0.1
+  insufficient_resources_penalty: -5.0
+exchange_rates:
+  min_total_produced_for_exchange: 5
+  money_per_gold_ore: 10
+  money_per_silver_ore: 7
+  money_per_copper_ore: 4
+  ore_processing_rate: 0.5
+  popular_luxury_base_money: 6
+  rare_luxury_base_money: 10
+  fossil_resource_base_money: 1
+  produced_resource_base_money: 2
+  base_money_per_resource:
+    food: 0.5
+    goods: 1.5
+    coffee: eval(popular_luxury_base_money)
+    fruit: eval(popular_luxury_base_money)
+    mahogany: eval(popular_luxury_base_money)
+    marble: eval(popular_luxury_base_money)
+    redfish: eval(popular_luxury_base_money)
+    spices: eval(popular_luxury_base_money)
+    tea: eval(popular_luxury_base_money)
+    crab: eval(rare_luxury_base_money)
+    ebony: eval(rare_luxury_base_money)
+    furs: eval(rare_luxury_base_money)
+    gems: eval(rare_luxury_base_money)
+    incense: eval(rare_luxury_base_money)
+    pearls: eval(rare_luxury_base_money)
+    aluminium: null  # TODO
+    aluminium_ore: eval(fossil_resource_base_money)
+    bronze_arms: eval(produced_resource_base_money)
+    cannons: eval(produced_resource_base_money)
+    cars: eval(produced_resource_base_money)
+    cast_iron: eval((produced_resource_base_money / fossil_resource_base_money) ** 0.5)
+    copper_ore: eval(fossil_resource_base_money)
+    copper_arms: eval(produced_resource_base_money)
+    coal: eval(fossil_resource_base_money)
+    gold_ore: eval(money_per_gold_ore * ore_processing_rate)
+    gunpowder: eval(produced_resource_base_money)
+    firearms: eval(produced_resource_base_money)
+    horses: 1.0
+    iron_arms: eval(produced_resource_base_money)
+    iron_ore: eval(fossil_resource_base_money)
+    lumber: eval(produced_resource_base_money)
+    niter: eval(fossil_resource_base_money)
+    oil: null  # TODO
+    silver_ore: eval(money_per_silver_ore * ore_processing_rate)
+    steel: null  # TODO
+    timber: 0.75
+    tin_ore: eval(fossil_resource_base_money)
+    # Not for sale:
+    knowledge: null
+    intel: null
+    cows: null
+    fish: null
+    game: null
+    sheep: null
+    stone: null
+    supplies: null
+    university_education: null
+    wheat: null
+  popular_luxury_normal_rppc: eval(1 / 8)
+  rare_luxury_normal_rppc: eval(1 / 16)
+  normal_rppc_per_resource:
+    food: 2
+    goods: 1
+    # Luxuries
+    coffee: eval(popular_luxury_normal_rppc)
+    fruit: eval(popular_luxury_normal_rppc)
+    mahogany: eval(popular_luxury_normal_rppc)
+    marble: eval(popular_luxury_normal_rppc)
+    redfish: eval(popular_luxury_normal_rppc)
+    spices: eval(popular_luxury_normal_rppc)
+    tea: eval(popular_luxury_normal_rppc)
+    crab: eval(rare_luxury_normal_rppc)
+    ebony: eval(rare_luxury_normal_rppc)
+    furs: eval(rare_luxury_normal_rppc)
+    gems: eval(rare_luxury_normal_rppc)
+    incense: eval(rare_luxury_normal_rppc)
+    pearls: eval(rare_luxury_normal_rppc)
+    # Concrete resources
+    aluminium: null  # TODO
+    aluminium_ore: null  # TODO
+    bronze_arms: 0.25
+    cannons: 0.125
+    cars: null  # TODO
+    cast_iron: 0.25
+    copper_ore: 0.25
+    copper_arms: 0.25
+    coal: 0.25
+    gold_ore: eval(rare_luxury_normal_rppc)
+    gunpowder: 0.125
+    firearms: 0.125
+    horses: 0.25
+    iron_arms: 0.125
+    iron_ore: 0.25
+    lumber: 0.25
+    niter: 0.125
+    oil: null  # TODO
+    silver_ore: eval(popular_luxury_normal_rppc)
+    steel: null  # TODO
+    timber: 0.5
+    tin_ore: 0.125
+    # Not for sale
+    knowledge: null
+    intel: null
+    cows: null
+    fish: null
+    game: null
+    sheep: null
+    stone: null
+    supplies: null
+    university_education: null
+    wheat: null
+  max_money_per_resource: 20.0
+gold:
+  base_income: 3
+  city_base_income: 0
+  unit_maintenance: -1
