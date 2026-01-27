@@ -1,7 +1,11 @@
 battles:
+  # How much it takes to make a full-force ranged attack without interruption.
   ranged_attack_max_ap_cost: 1.0
+
+  # Strength of defense if unit's defense for some particular attack kind is not specified.
   fallback_attack_defense:
     strength: 8
+
   base_city_counterattack_strength:
     strike: 20
     charge: 10
@@ -32,10 +36,19 @@ battles:
     ramming: 0
     canister_shots: 0
     round_shots: 0
+
+  # How much HP is supposed to be deduced from two equal units battling each other for 1 entire AP.
   base_hp_damage: 30
+
+  # When a ship successfully boards another ship, this fraction of boarders' HP will be transferred.
   boarding_hp_transfer_rate: 0.2
+
+  # Unit standing behind 100 SP structure (city or ship) loses HP proportionally to this fraction of damage.
   sp_100_damage_reduction: 0.5
+
+  # Unit standing behind 1000 SP structure (city or ship) loses HP proportionally to this fraction of damage.
   sp_1000_damage_reduction: 0.01
+
 city_budget:
   university_budget_per_citizen: 2
   university_default_budget: eval(2 * university_budget_per_citizen)
@@ -63,6 +76,8 @@ city_economy:
   fallback_priority: 0.1
   insufficient_resources_penalty: -5.0
 exchange_rates:
+  # How much of the resource should be produced in the entire world
+  # for it to be available for purchase.
   min_total_produced_for_exchange: 5
   money_per_gold_ore: 10
   money_per_silver_ore: 7
