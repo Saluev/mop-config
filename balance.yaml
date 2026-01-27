@@ -246,3 +246,95 @@ gold:
   base_income: 3
   city_base_income: 0
   unit_maintenance: -1
+
+improvements:
+  productivity_improvements:
+    - forestry
+    - hayfield
+    - watermill
+    - windmill
+
+  road_to_build_cost:
+    dirt_road: {ap: 1, gold: 1, turns: 1}
+    paved_road: {ap: 3, gold: 3, turns: 2}
+    railroad: {ap: 4, gold: 7, turns: 2}
+    highway: {ap: 6, gold: 10, turns: 2}
+
+  canal_to_build_cost:
+    stream_ltr: null
+    stream_rtl: null
+    river_ltr: null
+    river_rtl: null
+    aqueduct: {ap: 1.5, gold: 10, turns: 1}  # constructed step-by-step
+    dry_aqueduct: null
+    aqueduct_construction: null
+    canal: {ap: 10, gold: 100, turns: 7}
+    canal_construction: null
+    rocks: null
+
+  improvement_to_build_cost:
+    city_ruins: null
+    construction: null
+    deforestation_site: null
+    cow_pasture: {ap: 3}
+    fishing_pier: {ap: 3}
+    forestry: {ap: 5, gold: 3, turns: 2}
+    harbor: {ap: 3, gold: 5, turns: 2}
+    hayfield: {ap: 5, gold: 3, turns: 2}
+    hunting_grounds: {ap: 3}
+    logging_camp: {ap: 3}
+    mine: {ap: 5, turns: 2}
+    plantation: {ap: 3, turns: 2}
+    quarry: {ap: 3}
+    sheep_pasture: {ap: 3}
+    shipyard: {ap: 3, gold: 20, turns: 3}
+    stables: {ap: 3}
+    university: {ap: 3, gold: 20, turns: 2}
+    wheat_farm: {ap: 3}
+    watermill: {ap: 5, gold: 10, turns: 3}
+    windmill: {ap: 5, gold: 5, turns: 3}
+    farmers_village: null
+    fishermens_village: null
+    hunters_village: null
+    nomads_oasis: null
+    riverside_village: null
+    seafarers_village: null
+    shepherds_village: null
+    ancient_battlefield: null
+    ancient_fortress: null
+    ancient_library: null
+    ancient_obelisk: null
+    ancient_palace: null
+    ancient_shipwreck: null
+
+  city_kind_to_build_cost:
+    # TODO: much bigger values...
+    fortress: {ap: 7, gold: 20}
+    harbor: {ap: 3, gold: 5}
+    shipyard: {ap: 5, gold: 10}
+    university: {ap: 7, gold: 20}
+    walls: {ap: 5, gold: 10}
+    # "Virtual" city kinds:
+    capital: {ap: 0, gold: 0}
+    non_capital: {ap: 0, gold: 0}
+    # Not built for money:
+    city: {ap: 0, gold: 0}
+    deforestation_site: {ap: 0, gold: 0}
+    # To be done:
+    arctic_station: {ap: 0, gold: 0}
+    research_center: {ap: 0, gold: 0}
+    space_station: {ap: 0, gold: 0}
+
+  adjacent_watermill_food_bonus: 1
+  adjacent_watermill_wood_bonus: 1
+  adjacent_windmill_food_bonus: 0.5
+  adjacent_forestry_food_bonus: 0.5
+  adjacent_hay_barn_horses_bonus: 0.5
+  adjacent_hay_barn_food_bonus: 0.5
+
+  forest_growth_rate: 1
+  forestry_growth_rate_bonus: 1
+  forest_clearing_rate: 11
+  forest_clearing_resources:
+    timber: 2
+    goods: 2
