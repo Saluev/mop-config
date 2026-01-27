@@ -69,12 +69,64 @@ city_comfort:
 city_economy:
   per_citizen_food_demand: 2
   per_citizen_goods_priority: 0.25
-  base_tax_per_resource: {} # TODO
   gold_priority: 0.125
   knowledge_priority: 0.49
   comfort_priority: 0.25
   fallback_priority: 0.1
   insufficient_resources_penalty: -5.0
+  base_tax_per_resource:
+    # Generic resources
+    food: eval(exchange_rates.base_money_per_resource['food'] / 4)
+    goods: eval(exchange_rates.base_money_per_resource['goods'] / 4)
+    # Luxuries
+    coffee: eval(exchange_rates.base_money_per_resource['coffee'] / 4)
+    fruit: eval(exchange_rates.base_money_per_resource['fruit'] / 4)
+    mahogany: eval(exchange_rates.base_money_per_resource['mahogany'] / 4)
+    marble: eval(exchange_rates.base_money_per_resource['marble'] / 4)
+    redfish: eval(exchange_rates.base_money_per_resource['redfish'] / 4)
+    spices: eval(exchange_rates.base_money_per_resource['spices'] / 4)
+    tea: eval(exchange_rates.base_money_per_resource['tea'] / 4)
+    crab: eval(exchange_rates.base_money_per_resource['crab'] / 4)
+    ebony: eval(exchange_rates.base_money_per_resource['ebony'] / 4)
+    furs: eval(exchange_rates.base_money_per_resource['furs'] / 4)
+    gems: eval(exchange_rates.base_money_per_resource['gems'] / 4)
+    incense: eval(exchange_rates.base_money_per_resource['incense'] / 4)
+    pearls: eval(exchange_rates.base_money_per_resource['pearls'] / 4)
+    # Consumable strategic resources
+    bronze_arms: eval(exchange_rates.base_money_per_resource['bronze_arms'] / 4)
+    cars: eval(exchange_rates.base_money_per_resource['cars'] / 4)
+    copper_arms: eval(exchange_rates.base_money_per_resource['copper_arms'] / 4)
+    horses: eval(exchange_rates.base_money_per_resource['horses'] / 4)
+    iron_arms: eval(exchange_rates.base_money_per_resource['iron_arms'] / 4)
+    timber: eval(exchange_rates.base_money_per_resource['timber'] / 4)
+    # Not for consumption:
+    aluminium: null
+    aluminium_ore: null
+    cannons: null
+    cast_iron: null
+    coal: null
+    copper_ore: null
+    gold_ore: null
+    gunpowder: null
+    firearms: null
+    iron_ore: null
+    knowledge: null
+    lumber: null
+    oil: null
+    niter: null
+    silver_ore: null
+    steel: null
+    tin_ore: null
+    intel: null
+    cows: null
+    fish: null
+    game: null
+    sheep: null
+    stone: null
+    supplies: null
+    university_education: null
+    wheat: null
+
 exchange_rates:
   # How much of the resource should be produced in the entire world
   # for it to be available for purchase.
