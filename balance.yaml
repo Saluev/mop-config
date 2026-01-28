@@ -372,3 +372,10 @@ maneuver_bonuses:
 
   # Multiplicative bonus to cavalry's offense when it's raiding across a stream (small river).
   raid_crossing_stream_multiplicative_bonus: 0.5
+
+research:
+  # Knowledge gained when discovering a new tile (except ocean).
+  knowledge_per_discovered_tile: 1
+
+  # Bonus knowledge gained when discovering a biome for the first time. TODO biome-terrain combination?
+  knowledge_per_discovered_biome: 10
