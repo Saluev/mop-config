@@ -356,3 +356,19 @@ improvements:
   forest_clearing_resources:
     timber: 2
     goods: 2
+
+maneuver_bonuses:
+  # Multiplicative bonus to unit's defense if it holds its position (doesn't attack or move).
+  unit_holds_multiplicative_bonus: 1.33
+
+  # Multiplicative bonus to unit's defense when it's standing in a 100% density forest.
+  max_forest_defensive_multiplicative_bonus: 1.25
+
+  # Multiplicative bonus to unit's offense when it's attacking in a 100% density forest.
+  max_forest_offensive_multiplicative_bonus: 0.75
+
+  # Multiplicative bonus to unit's offense when it's advancing across a stream (small river).
+  advance_crossing_stream_multiplicative_bonus: 0.66
+
+  # Multiplicative bonus to cavalry's offense when it's raiding across a stream (small river).
+  raid_crossing_stream_multiplicative_bonus: 0.5
