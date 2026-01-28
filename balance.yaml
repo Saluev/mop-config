@@ -379,3 +379,49 @@ research:
 
   # Bonus knowledge gained when discovering a biome for the first time. TODO biome-terrain combination?
   knowledge_per_discovered_biome: 10
+
+traversal_ap_costs:
+  sea_tile_to_tile_ap_cost: 1
+  sea_change_direction_ap_cost: 1
+  board_ap_cost: 2
+  debark_ap_cost: 1
+
+  # AP costs for passing canals and rivers
+  enter_segment_ap_cost: 0.75
+  along_segment_ap_cost: 1
+  exit_segment_ap_cost: 0.75
+
+  land_tile_to_tile_ap_cost: 1
+
+  road_downhill_ap_multiplier: 0.5
+  road_uphill_ap_multiplier: 1.5
+  road_to_ap_cost:
+    dirt_road: eval(land_tile_to_tile_ap_cost / 2)
+    paved_road: eval(land_tile_to_tile_ap_cost / 3)
+    railroad: eval(land_tile_to_tile_ap_cost / 4)
+    highway: eval(land_tile_to_tile_ap_cost / 5)
+
+  offroad_downhill_ap_multiplier: eval(2/3)
+  offroad_uphill_ap_multiplier: 2
+  biome_to_forest_ap_multiplier:
+    grassland: 2
+    tundra: 2
+    tropics: 2.5
+    # TODO also take density into account?..
+
+  cross_ap_cost:
+    stream_ltr: 1.0
+    stream_rtl: 1.0
+    river_ltr: .inf
+    river_rtl: .inf
+    canal: 0.0
+    canal_construction: 0.0
+    aqueduct: 0.0
+    dry_aqueduct: 0.0
+    aqueduct_construction: 0.0
+    rocks: .inf
+
+  max_ap_cost: 3
+  # If unit has X (> 0) AP and movement to adjacent tile costs Y AP,
+  # unit is allowed to do it if X + max_ap_cost_deficiency >= Y.
+  max_ap_cost_deficiency: 1.25
