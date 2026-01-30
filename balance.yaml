@@ -425,3 +425,44 @@ traversal_ap_costs:
   # If unit has X (> 0) AP and movement to adjacent tile costs Y AP,
   # unit is allowed to do it if X + max_ap_cost_deficiency >= Y.
   max_ap_cost_deficiency: 1.25
+
+traversal_capacities:
+  base_capacity: 1.0
+  offroad_capacity: eval(base_capacity)
+  sea_capacity: eval(4 * base_capacity)  # TODO depends on epoch?..
+  embark_capacity: eval(sea_capacity)  # basically unlimited
+  disembark_capacity: eval(sea_capacity)  # basically unlimited
+  max_capacity: 100
+
+  across_to_capacity:
+    dirt_road: eval(2 * base_capacity)  # but cheaper
+    paved_road: eval(4 * base_capacity)
+    railroad: 0  # handled separately
+    highway: eval(6 * base_capacity)
+
+  # LTR = left-to-right direction along segment
+  ltr_along_to_capacity:
+    stream_ltr: eval(4 * base_capacity)
+    stream_rtl: 0
+    river_ltr: eval(4 * base_capacity)
+    river_rtl: eval(4 * base_capacity)
+    canal: eval(4 * base_capacity)
+    aqueduct_construction: 0
+    dry_aqueduct: 0
+    aqueduct: 0
+    canal_construction: 0
+    rocks: 0
+
+  # RTL = right-to-left direction along segment
+  rtl_along_to_capacity:
+    stream_ltr: 0
+    stream_rtl: eval(4 * base_capacity)
+    river_ltr: eval(4 * base_capacity)
+    river_rtl: eval(4 * base_capacity)
+    canal: eval(4 * base_capacity)
+    aqueduct_construction: 0
+    dry_aqueduct: 0
+    aqueduct: 0
+    canal_construction: 0
+    rocks: 0
+
