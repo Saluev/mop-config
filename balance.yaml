@@ -513,3 +513,16 @@ turns:
 
   # How many turns are remaining after the first player has won any kind of victory.
   turns_after_first_victory: 5
+
+villages:
+  revealed_tiles_per_village:
+    farmers_village: 75
+    hunters_village: 50
+    nomads_oasis: 90
+    shepherds_village: 75
+  max_reveal_range: 10
+  fishermens_village_reveal_range: 10
+  seafarers_village_reveal_range: 5
+  gained_knowledge_per_ancient_ruin: 20.0
+  gained_gold_per_palace: 30.0
+  tiles_per_village: 40
