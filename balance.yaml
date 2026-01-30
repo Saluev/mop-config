@@ -437,7 +437,7 @@ traversal_capacities:
   across_to_capacity:
     dirt_road: eval(2 * base_capacity)  # but cheaper
     paved_road: eval(4 * base_capacity)
-    railroad: 0  # handled separately
+    railroad: null  # handled separately
     highway: eval(6 * base_capacity)
 
   # LTR = left-to-right direction along segment
@@ -447,11 +447,11 @@ traversal_capacities:
     river_ltr: eval(4 * base_capacity)
     river_rtl: eval(4 * base_capacity)
     canal: eval(4 * base_capacity)
-    aqueduct_construction: 0
-    dry_aqueduct: 0
-    aqueduct: 0
-    canal_construction: 0
-    rocks: 0
+    aqueduct_construction: null
+    dry_aqueduct: null
+    aqueduct: null
+    canal_construction: null
+    rocks: null
 
   # RTL = right-to-left direction along segment
   rtl_along_to_capacity:
@@ -460,9 +460,51 @@ traversal_capacities:
     river_ltr: eval(4 * base_capacity)
     river_rtl: eval(4 * base_capacity)
     canal: eval(4 * base_capacity)
-    aqueduct_construction: 0
-    dry_aqueduct: 0
-    aqueduct: 0
-    canal_construction: 0
-    rocks: 0
+    aqueduct_construction: null
+    dry_aqueduct: null
+    aqueduct: null
+    canal_construction: null
+    rocks: null
+
+traversal_maintenance:
+  # 1e-15 is added to make embark-disembark more expensive than crossing a stream.
+  # TODO Still allows crossing rivers.
+  embark_maintenance: eval(3 / 4 + 1e-15)
+  disembark_maintenance: eval(3 / 4 + 1e-15)
+
+  along_to_maintenance:
+    stream_ltr: eval(1 / 8)
+    stream_rtl: eval(1 / 8)
+    river_ltr: eval(1 / 8)
+    river_rtl: eval(1 / 8)
+    aqueduct: null
+    dry_aqueduct: null
+    aqueduct_construction: null
+    canal: eval(1 / 4)
+    canal_construction: null
+    rocks: null
+
+  sea_tile_to_tile_maintenance: eval(1 / 8)  # for the trade routes
+  sea_tile_to_tile_fare_maintenance: eval(1 / 2)  # for public transportation
+  harbor_undock_maintenance: 1
+  harbor_dock_maintenance: 1
+  offroad_tile_to_tile_maintenance: 1
+
+  road_to_maintenance:
+    dirt_road: eval(1 / 2)
+    paved_road: eval(1 / 2)
+    railroad: eval(3 / 4)  # but huge capacity
+    highway: eval(1 / 2)
+
+  cross_maintenance_cost:
+    stream_ltr: 0.5
+    stream_rtl: 0.5
+    river_ltr: .inf
+    river_rtl: .inf
+    canal: 0.0
+    canal_construction: 0.0
+    aqueduct: 0.0
+    dry_aqueduct: 0.0
+    aqueduct_construction: 0.0
+    rocks: .inf
 
