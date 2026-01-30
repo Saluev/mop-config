@@ -508,3 +508,8 @@ traversal_maintenance:
     aqueduct_construction: 0.0
     rocks: .inf
 
+turns:
+  turns_per_epoch: 100
+
+  # How many turns are remaining after the first player has won any kind of victory.
+  turns_after_first_victory: 5
