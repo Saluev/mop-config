@@ -126,6 +126,36 @@ city_economy:
     supplies: null
     university_education: null
     wheat: null
+  bonuses:
+    # Collection of named structures used by buildings and maybe other entities.
+    # Hard to put into a Google Sheet because of complex structure.
+    ancient_obelisk_bonus:
+      comfort: 0.25
+    desert_tradition_bonus:
+      raw_biome_bonuses:
+        desert:
+          additive_per_resource:
+            food: 2
+    fishing_tradition_bonus:
+      improvement_bonuses:
+        fishing_pier:
+          additive_per_resource:
+            food: 1
+    hunting_tradition_bonus:
+      improvement_bonuses:
+        hunting_grounds:
+          additive_per_resource:
+            food: 1
+    shepherd_tradition_bonus:
+      improvement_bonuses:
+        cow_pasture:
+          additive_per_resource:
+            food: 1
+        sheep_pasture:
+          additive_per_resource:
+            food: 1
+    sewer_bonus:
+      overpopulation_discomfort_multiplier: 0.5
 
 exchange_rates:
   # How much of the resource should be produced in the entire world
