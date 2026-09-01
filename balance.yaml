@@ -81,6 +81,7 @@ city_economy:
     # Luxuries
     coffee: eval(exchange_rates.base_money_per_resource['coffee'] / 4)
     fruit: eval(exchange_rates.base_money_per_resource['fruit'] / 4)
+    grape: eval(exchange_rates.base_money_per_resource['grape'] / 4)
     mahogany: eval(exchange_rates.base_money_per_resource['mahogany'] / 4)
     marble: eval(exchange_rates.base_money_per_resource['marble'] / 4)
     redfish: eval(exchange_rates.base_money_per_resource['redfish'] / 4)
@@ -92,6 +93,7 @@ city_economy:
     gems: eval(exchange_rates.base_money_per_resource['gems'] / 4)
     incense: eval(exchange_rates.base_money_per_resource['incense'] / 4)
     pearls: eval(exchange_rates.base_money_per_resource['pearls'] / 4)
+    wine: eval(exchange_rates.base_money_per_resource['wine'] / 4)
     # Consumable strategic resources
     bronze_arms: eval(exchange_rates.base_money_per_resource['bronze_arms'] / 4)
     cars: eval(exchange_rates.base_money_per_resource['cars'] / 4)
@@ -183,6 +185,7 @@ exchange_rates:
     ebony: eval(rare_luxury_base_money)
     furs: eval(rare_luxury_base_money)
     gems: eval(rare_luxury_base_money)
+    grape: eval(popular_luxury_base_money / 2)
     incense: eval(rare_luxury_base_money)
     pearls: eval(rare_luxury_base_money)
     aluminium: null  # TODO
@@ -207,6 +210,7 @@ exchange_rates:
     steel: null  # TODO
     timber: 0.75
     tin_ore: eval(fossil_resource_base_money)
+    wine: eval(popular_luxury_base_money)
     # Not for sale:
     knowledge: null
     intel: null
@@ -226,6 +230,7 @@ exchange_rates:
     # Luxuries
     coffee: eval(popular_luxury_normal_rppc)
     fruit: eval(popular_luxury_normal_rppc)
+    grape: eval(popular_luxury_normal_rppc)
     mahogany: eval(popular_luxury_normal_rppc)
     marble: eval(popular_luxury_normal_rppc)
     redfish: eval(popular_luxury_normal_rppc)
@@ -237,6 +242,7 @@ exchange_rates:
     gems: eval(rare_luxury_normal_rppc)
     incense: eval(rare_luxury_normal_rppc)
     pearls: eval(rare_luxury_normal_rppc)
+    wine: eval(popular_luxury_normal_rppc)
     # Concrete resources
     aluminium: null  # TODO
     aluminium_ore: null  # TODO
