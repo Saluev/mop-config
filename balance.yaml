@@ -413,6 +413,9 @@ research:
   # Bonus knowledge gained when discovering a biome for the first time. TODO biome-terrain combination?
   knowledge_per_discovered_biome: 10
 
+  # Discount on converting track-specific knowledge to general knowledge when no tech on that track is available.
+  track_generalization_multiplier: 0.2
+
 traversal_ap_costs:
   sea_tile_to_tile_ap_cost: 1
   sea_change_direction_ap_cost: 1
