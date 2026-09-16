@@ -112,6 +112,14 @@ city_economy:
     firearms: null
     iron_ore: null
     knowledge: null
+    agriculture_knowledge: null
+    construction_knowledge: null
+    diplomacy_knowledge: null
+    industry_knowledge: null
+    military_knowledge: null
+    natural_philosophy_knowledge: null
+    shipbuilding_knowledge: null
+    trade_knowledge: null
     lumber: null
     oil: null
     niter: null
@@ -211,6 +219,14 @@ exchange_rates:
     wine: eval(popular_luxury_base_money)
     # Not for sale:
     knowledge: null
+    agriculture_knowledge: null
+    construction_knowledge: null
+    diplomacy_knowledge: null
+    industry_knowledge: null
+    military_knowledge: null
+    natural_philosophy_knowledge: null
+    shipbuilding_knowledge: null
+    trade_knowledge: null
     intel: null
     cows: null
     fish: null
@@ -265,6 +281,14 @@ exchange_rates:
     tin_ore: 0.125
     # Not for sale
     knowledge: null
+    agriculture_knowledge: null
+    construction_knowledge: null
+    diplomacy_knowledge: null
+    industry_knowledge: null
+    military_knowledge: null
+    natural_philosophy_knowledge: null
+    shipbuilding_knowledge: null
+    trade_knowledge: null
     intel: null
     cows: null
     fish: null
