@@ -440,6 +440,10 @@ research:
   # Discount on converting track-specific knowledge to general knowledge when no tech on that track is available.
   track_generalization_multiplier: 0.2
 
+  # C from C log₂ N formula describing how much knowledge player gets for the sum of active trade routes.
+  trade_knowledge_per_traversal_coef: 1.0
+  shipbuilding_knowledge_per_traversal_coef: 1.0
+
 traversal_ap_costs:
   sea_tile_to_tile_ap_cost: 1
   sea_change_direction_ap_cost: 1
