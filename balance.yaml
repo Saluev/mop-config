@@ -444,6 +444,24 @@ research:
   trade_knowledge_per_traversal_coef: 1.0
   shipbuilding_knowledge_per_traversal_coef: 1.0
 
+  # How much construction knowledge the player will earn for constructing a segment improvement.
+  across_to_knowledge:
+    dirt_road: 0.5
+    paved_road: 1.0
+    railroad: 2.0
+    highway: 2.0
+  along_to_knowledge:
+    stream_ltr: 0.0
+    stream_rtl: 0.0
+    river_ltr: 0.0
+    river_rtl: 0.0
+    aqueduct_construction: 0.0
+    dry_aqueduct: 0.0
+    aqueduct: 2.0
+    canal_construction: 0.0
+    canal: 5.0
+    rocks: 0.0
+
 traversal_ap_costs:
   sea_tile_to_tile_ap_cost: 1
   sea_change_direction_ap_cost: 1
