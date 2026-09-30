@@ -43,6 +43,16 @@ battles:
   # When a ship successfully boards another ship, this fraction of boarders' HP will be transferred.
   boarding_hp_transfer_rate: 0.2
 
+  # When a unit is moving to a tile and being attacked from the side-rear (but not rear, see next field),
+  # it loses HP proportionally to this fraction of damage.
+  # The idea here is that the unit is running away too fast for the attacker to hurt it in full.
+  withdrawing_damage_reduction: 0.5
+
+  # When a unit is moving to a tile and being attacked from the rear (the opposite direction to where it is going),
+  # it loses HP proportionally to this fraction of damage.
+  # The idea here is that the unit is running away too fast for the attacker to hurt it in full.
+  retreating_damage_reduction: 0.2
+
   # Unit standing behind 100 SP structure (city or ship) loses HP proportionally to this fraction of damage.
   sp_100_damage_reduction: 0.5
 
@@ -421,14 +431,27 @@ maneuver_bonuses:
   # Multiplicative bonus to unit's defense when it's standing in a 100% density forest.
   max_forest_defensive_multiplicative_bonus: 1.25
 
-  # Multiplicative bonus to unit's offense when it's attacking in a 100% density forest.
+  # Multiplicative penalty to unit's offense when it's attacking in a 100% density forest.
   max_forest_offensive_multiplicative_bonus: 0.75
 
-  # Multiplicative bonus to unit's offense when it's advancing across a stream (small river).
+  # Multiplicative penalty to unit's offense when it's advancing across a stream (small river).
   advance_crossing_stream_multiplicative_bonus: 0.66
 
-  # Multiplicative bonus to cavalry's offense when it's raiding across a stream (small river).
+  # Multiplicative penalty to cavalry's offense when it's raiding across a stream (small river).
   raid_crossing_stream_multiplicative_bonus: 0.5
+
+  # Multiplicative penalty to unit's defense when, while attacking or moving to a tile,
+  # it was "flanked" — attacked by a unit standing on tile adjacent to both unit position and unit destination.
+  attacked_flanking_multiplicative_bonus: 0.85
+
+  # Multiplicative penalty to unit's defense when, while attacking or moving to a tile,
+  # it was attacked from the side-rear (but not rear as in the opposite direction to where it was going).
+  attacked_withdrawing_multiplicative_bonus: 0.7
+
+    # Multiplicative penalty to unit's defense when, while attacking or moving to a tile,
+  # it was attacked from the rear (the opposite direction to where it was going).
+  attacked_retreating_multiplicative_bonus: 0.5
+
 
 research:
   # Knowledge gained when discovering a new tile (except ocean).
@@ -436,9 +459,6 @@ research:
 
   # Bonus knowledge gained when discovering a biome for the first time. TODO biome-terrain combination?
   knowledge_per_discovered_biome: 10
-
-  # Discount on converting track-specific knowledge to general knowledge when no tech on that track is available.
-  track_generalization_multiplier: 0.2
 
   # C from C log₂ N formula describing how much knowledge player gets for the sum of active trade routes.
   trade_knowledge_per_traversal_coef: 1.0
