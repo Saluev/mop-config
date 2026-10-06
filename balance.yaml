@@ -460,6 +460,12 @@ research:
   # Bonus knowledge gained when discovering a biome for the first time. TODO biome-terrain combination?
   knowledge_per_discovered_biome: 10
 
+  # Knowledge per turn granted for every owned land unit capable of an attack.
+  military_knowledge_per_military_unit_per_turn: 2
+
+  # Knowledge per turn granted for every owned naval unit capable of an attack.
+  shipbuilding_knowledge_per_military_unit_per_turn: 2
+
   # C from C log₂ N formula describing how much knowledge player gets for the sum of active trade routes.
   trade_knowledge_per_traversal_coef: 1.0
   shipbuilding_knowledge_per_traversal_coef: 1.0
