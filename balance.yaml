@@ -466,7 +466,9 @@ research:
     cows: 10
     fruit: 10
     game: 10
+    incense: 10
     sheep: 10
+    spices: 10
     tea: 10
     wheat: 10
     wine: 10
