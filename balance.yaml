@@ -460,6 +460,22 @@ research:
   # Bonus knowledge gained when discovering a biome for the first time. TODO biome-terrain combination?
   knowledge_per_discovered_biome: 10
 
+  # Bonus knowledge gained when discovering a resource for the first time.
+  agriculture_knowledge_per_discovered_resource:
+    coffee: 10
+    cows: 10
+    fruit: 10
+    game: 10
+    sheep: 10
+    tea: 10
+    wheat: 10
+    wine: 10
+
+  shipbuilding_knowledge_per_discovered_resource:
+    crab: 5
+    fish: 5
+    redfish: 5
+
   # Knowledge per turn granted for every owned land unit capable of an attack.
   military_knowledge_per_military_unit_per_turn: 2
 
