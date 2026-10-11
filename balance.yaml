@@ -489,6 +489,12 @@ research:
   trade_knowledge_per_traversal_coef: 1.0
   shipbuilding_knowledge_per_traversal_coef: 1.0
 
+  # Knowledge per turn for every worked tile without an improvement (producing > 0 food).
+  agriculture_knowledge_per_tile_without_improvement: 0.1
+
+  # Knowledge per turn for every worked tile with an improvement (except for villages and ruins).
+  knowledge_per_tile_with_improvement: 1.0
+
   # How much construction knowledge the player will earn for constructing a segment improvement.
   across_to_knowledge:
     construction: 0.0
