@@ -322,7 +322,7 @@ gold:
 improvements:
   # AP here and below is deprecated (was used when units were building the improvements).
   road_to_build_cost:
-    construction: {}
+    construction: null
     dirt_road: {ap: 1, gold: 1, turns: 1}
     paved_road: {ap: 3, gold: 3, turns: 2}
     railroad: {ap: 4, gold: 7, turns: 2}
