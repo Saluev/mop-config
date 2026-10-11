@@ -463,16 +463,16 @@ research:
 
   # Bonus knowledge gained when discovering a resource for the first time.
   agriculture_knowledge_per_discovered_resource:
-    coffee: 10
-    cows: 10
-    fruit: 10
-    game: 10
-    incense: 10
-    sheep: 10
-    spices: 10
-    tea: 10
-    wheat: 10
-    wine: 10
+    coffee: 5
+    cows: 5
+    fruit: 5
+    game: 5
+    incense: 5
+    sheep: 5
+    spices: 5
+    tea: 5
+    wheat: 5
+    wine: 5
 
   shipbuilding_knowledge_per_discovered_resource:
     crab: 5
