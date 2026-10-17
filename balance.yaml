@@ -355,6 +355,7 @@ improvements:
     sheep_pasture: {ap: 3, gold: 10, turns: 1}
     shipyard: {ap: 3, gold: 20, turns: 4}
     stables: {ap: 3, gold: 10, turns: 2}
+    standing_stones: {ap: 10, gold: 5, turns: 5}
     university: {ap: 3, gold: 20, turns: 4}
     wheat_farm: {ap: 3, gold: 10, turns: 1}
     watermill: {ap: 5, gold: 15, turns: 3}
