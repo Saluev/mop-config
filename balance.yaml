@@ -424,7 +424,7 @@ improvements:
 
   # Amount of resources a city receives from clearing a forest nearby.
   forest_clearing_resources:
-    timber: 2
+    timber: 4
     goods: 2
 
 maneuver_bonuses:
